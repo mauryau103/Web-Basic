@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="change()">Change Image</button>
+    <img id="sachinimg" src="../../HTML/MyImages/photo-1548199973-03cce0bbc87b.jpg" alt="sachin" height="200" width="200">
+    <button onclick="zoom()">Zoom</button>
+    
+    <script>
+        let imgNode=document.getElementById('sachinimg');
+        let source=imgNode.src;
+        console.log(source);
+
+        function change(){
+            imgNode.src="../../HTML/MyImages/road.jpg";
+        }
+        setTimeout(()=>{
+            change();
+            console.log("in setTimeout");  
+        },3000);
+        let i=0;
+        let interval=setInterval(()=>{
+            change();
+            i++;
+            console.log("in SetInterval");
+
+        },3000);
+        //this way we can register event with elements
+        imgNode.addEventListener('mouseover', ()=>{
+           scaleIn();
+        })
+        imgNode.addEventListener('mouseleave', ()=>{
+           scaleOut();
+        })
+       imgNode.style.transitionDuration="1s";
+        function scaleIn(){     
+            imgNode.style.transform="scale(2)";
+        }
+        function scaleOut(){
+            imgNode.style.transform="scale(1)";
+        }
+        function zoom(){   
+            /*height and width attribute must be available for below logic to work*/
+
+             imgNode.height=imgNode.height+10;
+             imgNode.width=imgNode.width+10; 
+
+            /*if style have height and width then use below logic*/
+          
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      div {
+          height: 200px;
+          width: 700px;
+          background-image: repeating-radial-gradient(circle, pink, red 10%, yellow 20%);
+          font-size: 40px;
+          font-weight: bold;
+          text-align: center;
+      }
+      #main {
+                height: 250px;
+                width: 600px;
+                background-color: white;
+                background-image: repeating-radial-gradient(blue,
+                white 10%, green 15%)
+            }
+      .farrad{
+            background-image: repeating-radial-gradient(closest-side at 60% 55%, red, yellow, black);
+          }
+  </style>
+</head>
+<body>
+    <h1>The datalist element</h1>
+
+<form action="success.html">
+  <label for="browser">Choose your browser from the list:</label>
+  <input list="browsers" name="browser" id="browser">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+<br>
+<div>This is Repeating-radial-gradient function() in CSS.</div>
+<div Id="main">
+
+</div>
+
+<div class='farrad'>
+
+</div>
+</body>
+</html>

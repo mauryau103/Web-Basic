@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8</title>
+    <style>
+        #para1{
+            /*The border-image property in CSS is used to set the border of an element.*/
+            /*border-image: source slice width outset repeat|initial|inherit;*/
+            /**/
+            height: 300px;
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image-source: url(./MyImages/star.jpg);
+            border-image-repeat: round ;
+            border-image-slice:30 ; /*stretch jaisa hi kuch hota hai (DOUBT)*/
+            border-image-width: 10px;
+            border-image-outset: 10px; /*thoda out jayega border value increase karenge to */
+            
+            
+        }
+        #para2{
+                border: 10px solid transparent;
+                padding: 15px;
+                border-image: url(./MyImages/star.jpg)30 round;
+                text-align:center;
+        }
+        #para3{
+                border: 10px solid transparent;
+                padding: 15px;
+                border-image: url(./MyImages/star.jpg)30 stretch;
+                text-align:center;
+        }
+        #para4{
+            border: transparent solid 4px;
+            border-image: linear-gradient(rgb(155, 211, 137), rgb(150, 180, 101)) 30 round;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        
+            <p id="para1">para 1</p>
+       
+            <p id="para2">Para 2</p>
+
+            <p id="para3">Para 3</p>
+       
+    </section>
+    <section>
+        <p id="para4">para 1</p>
+    </section>
+</body>
+</html>

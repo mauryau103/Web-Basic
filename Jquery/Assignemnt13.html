@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and toggling with image</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //Implement hide effect for image
+        $(document).ready(function(){
+            let btnNode=$('[type="button"]');
+            btnNode.click(function(){
+                if(btnNode.val()==='HIDE'){
+                    $('#block1').hide(3000,function(){
+                        btnNode.val('SHOW');
+                    });
+                }
+                else{
+                    $('#block1').show(3000,function(){
+                        btnNode.val('HIDE');
+                    });
+                }
+            });
+            $('#toggle').click(function(){
+                $('#block1').toggle(3000);
+            });
+        });
+    </script>
+    <style>
+        img{
+            border: 4px solid black;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="HIDE">
+    <button id="toggle">Toggle HideShow</button>
+    <div id="block1">
+       <img src="../HTML/MyImages/swami.jpg" alt="Swami vivekanand">
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!-- Implement below logic using filter method with arrow function.
+
+
+let names =['Hari','Pari','Krishna','Sai','Subodh','Suman','santosh','Kishori'];
+
+1. Filter the names ending with 'ri'
+
+2. Filter the names ending withn 'i'
+
+3. Filter the names starting with 'S' (ignore case),
+
+4. Filter the names starting with 'su' (Ignore case)
+
+let snames= ['Rupa','    rupa', 'rupa   ','RUPA','RUPALI' ];
+
+Filter the array having name Rupa (ignore case)
+
+
+Implement remaining methods from  string api which are not covered in session
+
+Implement slice method of array -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript logics</title>
+</head>
+<body>
+    <script>
+        /*--------------------------------------*/
+        // 1. Filter the names ending with 'ri'
+        var names =['Hari','Pari','Krishna','Sai','Subodh','Suman','santosh','Kishori'];
+        console.log(names.filter(
+            (val) => {
+                return val.endsWith("ri");
+            }
+        ));
+        /*--------------------------------------*/
+        // 2. Filter the names ending withn 'i'
+        console.log(names.filter(
+            (val) => {
+                return val.endsWith("i");
+            }
+        ));
+        /*--------------------------------------*/
+        // 3. Filter the names starting with 'S' (ignore case)
+        console.log(names.filter(
+            (val) => {
+                return val.toLowerCase().startsWith("S".toLowerCase());
+            }
+        ));
+        /*--------------------------------------*/
+        // 4. Filter the names starting with 'su' (Ignore case)
+        console.log(names.filter(
+            (val) => {
+                return val.toLowerCase().startsWith("su".toLowerCase());
+            }
+        ));
+        /*--------------------------------------*/
+        let snames= ['Rupa','    rupa', 'rupa   ','RUPA','RUPALI' ];
+        // Filter the array having name Rupa (ignore case)
+        console.log(snames.filter(
+            (val) => {
+                return (
+                    val.trim().toLowerCase().includes("Rupa".toLowerCase())
+                )
+            }
+        ));
+
+
+
+        //Slice Method
+        let text = "Neosoft Technologies";
+        let result = text.slice(0, 7);
+        console.log(result);
+
+        //search method : it returns the index of first match.
+        var text2="Fear leads to anger,anger leads to hatred,hatred leads to conflict,conflict leads to suffering."
+        let position = text2.search("leads");
+        console.log(position);
+
+        //split
+        console.log(text.split(" "));
+
+        //padStart
+        const str1 = '5';
+        console.log(str1.padStart(5, '0'));
+    
+        //padEnd
+        const str2 = 'Breaded Mushrooms';
+        console.log(str2.padEnd(25, '.'));
+        
+        //charCodeAt
+        const sentence = 'The quick brown fox jumps over the lazy dog.';
+
+        const index = 4;
+
+        console.log(`The character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(index)}`);
+        // expected output: "The character code 113 is equal to q"
+
+
+        //match
+        const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+        const regex = /[A-Z]/g;
+        const found = paragraph.match(regex);
+
+        console.log(found);
+        // expected output: Array ["T", "I"]
+        //replace
+        const p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+
+        console.log(p.replace('dog', 'monkey'));
+        // expected output: "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
+
+    </script>
+</body>
+</html>

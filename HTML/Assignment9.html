@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+        background-color: #f3b3f0;
+        padding: 2em;
+      }
+        div {
+          margin: 10px;
+          font-size: 20px;
+        }
+        input[type="radio"]:checked {
+          box-shadow: 0 0 0 4px #42bf5d;
+        }
+          /* Checkbox element, when checked */
+        input[type="checkbox"]:checked {
+          box-shadow: 0 0 0 3px #1c87c9;
+        }
+        
+        input[type=text]:disabled {
+            background: #ccc;
+        }
+        input[type=number]:read-only{
+            background-color: #ccc;
+        }
+        input[type=email]:invalid{
+            background-color: rgb(238, 101, 101);
+        }
+        p:empty{
+            width: 200px;
+            height: 30px;
+            background-color: #8ebf42;
+        }
+        section>:not(p){
+            color: deeppink;
+        }
+
+        ol li::marker {
+        content: "# ";
+        }
+
+      </style>
+</head>
+<body>
+    <!-- Implement following Pseudo classes
+checked, disabled, readonly,  invalid, empty, not, root
+
+Implement following Pseudo elements
+Marker-->
+<h2>checked selector example</h2>
+<div>
+  <input type="radio" name="my-input" id="yes">
+  <label for="yes">Yes</label>
+  <input type="radio" name="my-input" id="no">
+  <label for="no">No</label>
+</div>
+<div>
+  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <label for="opt-in">Check!</label>
+</div>
+
+<h2>disabled selector and readonly example</h2>
+    <form action="">
+      <label for="name">First name:</label>
+      <input type="text" value="umesh" id="name">
+      <br>
+      <label for="lastname">Last name:</label>
+      <input type="text" value="maurya" id="lastname">
+      <br>
+      <label for="email">Email Id:</label>
+      <input type="email" value="Email" id="email">
+      <br>
+      <label for="age">Age:</label>
+      <input type="number" value="21" id="age" readonly>
+      <br>
+      <label for="country">Country:</label>
+      <input type="text" disabled="disabled" value="10 High Street" id="conutry">
+    </form>
+    <section>
+        <p>Lorem ipsum is simply dummy text...</p>
+        <p></p>
+        <p>Lorem ipsum is simply dummy text...</p>
+        <b>hii Neosoft family enjoy learning</b>
+    </section>
+
+    <article>
+        <ol>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Corporis aliquam excepturi neque deleniti.</li>
+            <li>Incidunt eos repellendus vitae deserunt!</li>
+          </ol>
+    </article>
+</body>
+</html>

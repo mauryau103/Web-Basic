@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Demo</title>
+    <style>
+        [type='email']{
+            background-color: aqua;
+        }
+        [class]{
+            background-color: darkkhaki;
+        }
+        .radio{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form action="success.html">
+        <table border="1" style="border-collapse: collapse;">
+            <caption>Html forms & Input Controls</caption>
+            <tr>
+                <td><label for="fname">First Name :</label></td>
+                <td><input type="text" id="fname" name="myname" required></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name :</label></td>
+                <td><input type="text" id="lname" name="myname"></td>
+            </tr>
+            <tr>
+                <td><label for="age">Your Age :</label></td>
+                <td><input type="number" id="age" name="myage" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Enter Email :</label></td>
+                <td><input type="email" id="email" name="myemail"></td>
+            </tr>
+            <tr>
+                <td><label for="username">UserName :</label></td>
+                <td><input type="text" id="username" name="myusername"></td>
+            </tr>
+            <tr>
+                <td><label for="contact">Contact Number :</label></td>
+                <td><input type="tel" id="contact" name="mycontact"></td>
+            </tr>
+            <tr>
+                <td><label for="bd">Birth Date :</label></td>
+                <td><input type="datetime-local" id="bd" name="mybd"></td>
+            </tr>
+            <tr>
+                <td><label for="jmonth">Joined Month :</label></td>
+                <td><input type="month" id="jmonth" name="myjmonth"></td>
+            </tr>
+            <tr>
+                <td><label for="jloc">Joining Location :</label></td>
+                <td><input type="text" id="jloc" name="myjloc" value="Prabhadevi" readonly></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password :</label></td>
+                <td><input type="password" id="password" name="mypass"></td>
+            </tr>
+            <tr>
+                <td><label for="cpassword">Confirm Password :</label></td>
+                <td><input type="password" id="cpassword" name="mypass"></td>
+            </tr>
+        </table>
+        <section>
+            <label>Choose Interested topic:</label><br>
+            <label><input type="checkbox" id="ch1" name="course" value="java">:Java</label>
+            <label><input type="checkbox" id="ch2" name="course" value="python">:Python</label>
+            <label><input type="checkbox" id="ch3" name="course" value="web basics">:Web Basics</label>
+            <label><input type="checkbox" id="ch1" name="course" value="javascript">:Javascript</label>
+        </section>
+        <section class="radio">
+            <label>Choose Gender</label>
+            <label><input type="radio" id="r1" name="gender" value="male">:Male</label>
+            <label><input type="radio" id="r2" name="gender" value="Female">:Female</label>
+        </section>
+        <section class="button">
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </section>
+    </form>
+</body>
+</html>

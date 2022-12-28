@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Access Demo</title>
+    <style>
+        body{
+            background-color: #72E6F4;
+        }
+    </style>
+</head>
+<body>
+    <img src="" alt="" id="img_id">
+    <script>
+            var imgArray = ["../../HTML/MyImages/flower1.jpg","../../HTML/MyImages/flower2.jpg","../../HTML/MyImages/flower3.jpg","../../HTML/MyImages/flower4.jpg"];
+            var index = 0;
+
+            function slide()
+            {
+            document["img_id"].src = imgArray[index];
+            index ++;
+            if(index>=imgArray.length)
+            {
+                index=0;
+            }
+            }
+            setInterval("slide()",1000);
+        </script>
+        // how to do this by using class array
+</body>
+</html>

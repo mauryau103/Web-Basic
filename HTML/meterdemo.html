@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        meter{
+            height: 50px;
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <b>Fuel Indicator</b><br>
+    <meter min="0" low="50" value="200" optimum="180" high="160" max="200"></meter>
+    <meter min="0" low="50" value="159" optimum="180" high="160" max="200"></meter>
+    <meter min="0" low="50" value="49" optimum="180" high="160" max="200"></meter>
+
+    <meter min="0" low="50" value="200" optimum="180" high="160" max="200" id="myfuel"></meter>
+    <script>
+        setInterval(()=>{
+            document.getElementById('myfuel').value--;
+        },200)
+    </script>
+</body>
+</html>

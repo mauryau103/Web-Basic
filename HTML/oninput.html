@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <form oninput="if(num1.value=='')num1.value='0'; if(num2.value=='')num2.value='0';op.value=parseFloat(num1.value)+parseFloat(num2.value);">
+            <label for="num1">Input First Number</label>
+            <input type="number" id="num1"><br>
+            <label for="num2">Input Second Number</label>
+            <input type="number" id="num2"><br>
+            <p><b>result is: <i><output id="op"></output></i></b></p>
+        </form>
+    </section>
+</body>
+</html>
